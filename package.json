@@ -1,0 +1,19 @@
+{
+  "name": "deepjsontocsv",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest --run",
+    "typecheck": "tsc --noEmit -p ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "^3.3.3",
+    "typescript": "^5.5.4",
+    "vite-node": "^2.0.5",
+    "vitest": "^2.0.5"
+  }
+}
