@@ -5,9 +5,7 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
       # Checkout the code from the repository
       - name: Checkout repository
@@ -26,6 +24,10 @@ jobs:
       # Install dependencies
       - name: Install dependencies
         run: pnpm install
+
+      # Run prettier format
+      - name: Run prettier format
+        run: pnpm run format:check
 
       # Run TypeScript type checks
       - name: Run TypeScript type check

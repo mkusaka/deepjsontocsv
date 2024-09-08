@@ -24,7 +24,7 @@ npm install deepjsontocsv
 Here’s an example of how to use the library:
 
 ```tsx
-import { jsonToCsv } from 'deepjsontocsv';
+import { jsonToCsv } from "deepjsontocsv";
 
 const jsonObject = {
   album: "The White Stripes",
@@ -44,7 +44,6 @@ const jsonObject = {
 
 const csvResult = jsonToCsv(jsonObject);
 console.log(csvResult);
-
 ```
 
 Output:
@@ -84,7 +83,6 @@ const jsonArray = [
 
 const csvResult = jsonToCsv(jsonArray);
 console.log(csvResult);
-
 ```
 
 Output:
@@ -128,20 +126,26 @@ De Stijl,2000,-
 ### `jsonToCsv(json: JsonObject | JsonObject[]): string`
 
 - **Parameters:**
-    - `json`: A single JSON object or an array of JSON objects to be converted into CSV.
+  - `json`: A single JSON object or an array of JSON objects to be converted into CSV.
 - **Returns:**
-    - A string in CSV format representing the input JSON data.
+  - A string in CSV format representing the input JSON data.
 
 ## Type Definitions
 
 The following types are used by the library:
 
 ```tsx
-type JsonValue = string | number | boolean | null | undefined | JsonObject | JsonValue[];
+type JsonValue =
+  | string
+  | number
+  | boolean
+  | null
+  | undefined
+  | JsonObject
+  | JsonValue[];
 interface JsonObject {
-    [key: string]: JsonValue;
+  [key: string]: JsonValue;
 }
-
 ```
 
 ## Limitations
