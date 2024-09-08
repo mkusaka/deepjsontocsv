@@ -82,8 +82,13 @@ De Stijl,2000,-,,,,`;
     expect(result).toBe(expectedCsv);
   });
 
-  it("should convert an array of JSON objects to CSV", () => {
+  it("should convert an array of JSON objects to CSV 2", () => {
     const jsonArray = [
+      {
+        album: "De Stijl",
+        year: 2000,
+        US_peak_chart_post: "-",
+      },
       {
         album: "The White Stripes",
         year: 1999,
@@ -99,16 +104,11 @@ De Stijl,2000,-,,,,`;
           },
         ],
       },
-      {
-        album: "De Stijl",
-        year: 2000,
-        US_peak_chart_post: "-",
-      },
     ];
 
     const expectedCsv = `album,year,US_peak_chart_post,main_actor.name,main_actor.birth,actors[0].name,actors[0].birth
-The White Stripes,1999,-,Jack White,1975,Jack White,1975
-De Stijl,2000,-,,,,`;
+De Stijl,2000,-,,,,
+The White Stripes,1999,-,Jack White,1975,Jack White,1975`;
 
     const result = jsonToCsv(jsonArray);
     expect(result).toBe(expectedCsv);

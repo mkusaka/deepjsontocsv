@@ -1,0 +1,36 @@
+name: Run Tests and Type Check
+
+on:
+  push:
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout the code from the repository
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Set up Node.js using the version from the `package.json` or `.nvmrc`
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .node-version
+
+      # Install pnpm
+      - name: Install pnpm
+        run: npm install -g pnpm
+
+      # Install dependencies
+      - name: Install dependencies
+        run: pnpm install
+
+      # Run TypeScript type checks
+      - name: Run TypeScript type check
+        run: pnpm run typecheck
+
+      # Run tests with Vitest
+      - name: Run tests with Vitest
+        run: pnpm run test
