@@ -2,18 +2,43 @@
   "name": "deepjsontocsv",
   "version": "0.0.1",
   "description": "",
-  "main": "index.js",
+  "main": "main.js",
+  "types": "main.d.ts",
   "scripts": {
+    "build": "tsc",
     "test": "vitest --run",
     "typecheck": "tsc --noEmit -p ."
   },
-  "keywords": [],
-  "author": "",
+  "files": [
+    "LICENSE",
+    "main.test.ts",
+    "main.ts",
+    "main.d.ts",
+    "main.d.ts.map",
+    "main.js",
+    "package.json",
+    "README.md",
+    "tsconfig.json"
+  ],
+  "keywords": [
+    "json",
+    "csv",
+    "json-to-csv"
+  ],
+  "author": "mkusaka <hinoshita1992@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "prettier": "^3.3.3",
     "typescript": "^5.5.4",
     "vite-node": "^2.0.5",
     "vitest": "^2.0.5"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mkusaka/deepjsontocsv.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mkusaka/deepjsontocsv/issues"
+  },
+  "homepage": "https://github.com/mkusaka/deepjsontocsv#readme"
 }
