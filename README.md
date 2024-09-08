@@ -8,6 +8,7 @@ A TypeScript utility for converting deeply nested JSON objects or arrays into CS
 - Handles nested objects and arrays, flattening them into a single level.
 - Automatically generates headers based on the JSON structure.
 - Flexible and supports optional or undefined values in JSON.
+- CLI support for converting JSON to CSV directly from the terminal.
 
 ## Installation
 
@@ -98,8 +99,6 @@ De Stijl,2000,-,,,,
 The library gracefully handles undefined or missing fields, ensuring the output remains valid.
 
 ```tsx
-typescript
-Copy code
 const jsonArrayWithMissingFields = [
   {
     album: "De Stijl",
@@ -110,7 +109,6 @@ const jsonArrayWithMissingFields = [
 
 const csvResult = jsonToCsv(jsonArrayWithMissingFields);
 console.log(csvResult);
-
 ```
 
 Output:
@@ -118,6 +116,73 @@ Output:
 ```csv
 album,year,US_peak_chart_post
 De Stijl,2000,-
+
+```
+
+## CLI Usage
+
+Once installed globally, you can use `deepjsontocsv` directly from the command line to convert JSON files into CSV
+files.
+
+### Basic CLI Usage
+
+```bash
+deepjsontocsv <input-json-file> [output-csv-file]
+
+```
+
+- **`input-json-file`**: The path to the input JSON file that you want to convert.
+- **`output-csv-file`** (optional): The path to save the CSV file. If this argument is not provided, the CSV output will
+  be printed to the console.
+
+### CLI Examples
+
+1. **Convert JSON to CSV and print to console**:
+
+```bash
+deepjsontocsv input.json
+```
+
+This will convert the `input.json` file to CSV format and print the CSV output to the console.
+
+2. **Convert JSON to CSV and save to file**:
+
+```bash
+deepjsontocsv input.json output.csv
+```
+
+This will convert the `input.json` file to CSV format and save it as `output.csv`.
+
+3. **Show the CLI version**:
+
+You can check the version of the CLI using the `--version` flag:
+
+```bash
+deepjsontocsv --version
+```
+
+4. **Display help**:
+
+Use the `--help` flag to see available options:
+
+```bash
+deepjsontocsv --help
+```
+
+Output:
+
+```bash
+Usage: deepjsontocsv [options] <input-json-file> [output-csv-file]
+
+A CLI tool to convert deep JSON objects to CSV format.
+
+Arguments:
+  input-json-file         The path to the input JSON file to convert
+  output-csv-file         Optional: The path to save the output CSV file. If not provided, the output will be printed to stdout.
+
+Options:
+  -V, --version           output the version number
+  -h, --help              display help for command
 
 ```
 
@@ -143,6 +208,7 @@ type JsonValue =
   | undefined
   | JsonObject
   | JsonValue[];
+
 interface JsonObject {
   [key: string]: JsonValue;
 }
@@ -150,8 +216,10 @@ interface JsonObject {
 
 ## Limitations
 
-- Arrays inside JSON are indexed and flattened. For example, an array like `actors` will be represented as `actors[0].name`, `actors[1].name`, etc.
-- Only primitive values (`string`, `number`, `boolean`, `null`, `undefined`) are supported as leaf nodes in the JSON structure.
+- Arrays inside JSON are indexed and flattened. For example, an array like `actors` will be represented as
+  `actors[0].name`, `actors[1].name`, etc.
+- Only primitive values (`string`, `number`, `boolean`, `null`, `undefined`) are supported as leaf nodes in the JSON
+  structure.
 
 ## License
 
