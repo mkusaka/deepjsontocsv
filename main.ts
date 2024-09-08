@@ -1,3 +1,5 @@
+import { stringify } from 'csv-stringify/sync';
+
 type JsonValue = string | number | boolean | null | undefined | JsonObject | JsonValue[];
 interface JsonObject {
     [key: string]: JsonValue;
@@ -28,7 +30,7 @@ function flattenJson(data: JsonObject | JsonObject[]): Record<string, string> {
     return result;
 }
 
-// Function to convert JSON to CSV
+// Function to convert JSON to CSV using `csv-stringify`
 export function jsonToCsv(json: JsonObject | JsonObject[]): string {
     const jsonArray = Array.isArray(json) ? json : [json]; // Ensure we work with an array
 
@@ -46,13 +48,11 @@ export function jsonToCsv(json: JsonObject | JsonObject[]): string {
     // Convert the header set to an array
     const headers = Array.from(headersSet);
 
-    // Create CSV content
-    const csvRows = [
-        headers.join(","), // Header row
-        ...flattenedRows.map((row) =>
-            headers.map((header) => (row[header] ?? '')).join(',')
-        ),
-    ];
+    // Use `csv-stringify` to convert the flattened data to CSV
+    const csvOutput = stringify(flattenedRows, {
+        header: true, // Include the headers
+        columns: headers // Specify the headers for the CSV
+    });
 
-    return csvRows.join("\n");
+    return csvOutput;
 }

@@ -21,7 +21,8 @@ describe("jsonToCsv", () => {
     };
 
     const expectedCsv = `album,year,US_peak_chart_post,main_actor.name,main_actor.birth,actors[0].name,actors[0].birth
-The White Stripes,1999,-,Jack White,1975,Jack White,1975`;
+The White Stripes,1999,-,Jack White,1975,Jack White,1975
+`;
 
     const result = jsonToCsv(jsonObject);
     expect(result).toBe(expectedCsv);
@@ -45,7 +46,8 @@ The White Stripes,1999,-,Jack White,1975,Jack White,1975`;
     };
 
     const expectedCsv = `album,year,US_peak_chart_post,main_actor.name,main_actor.birth,actors[0].name,actors[0].birth
-The White Stripes,1999,-,Jack White,1975,Jack White,1975`;
+The White Stripes,1999,-,Jack White,1975,Jack White,1975
+`;
 
     const result = jsonToCsv(jsonObject);
     expect(result).toBe(expectedCsv);
@@ -76,7 +78,8 @@ The White Stripes,1999,-,Jack White,1975,Jack White,1975`;
 
     const expectedCsv = `album,year,US_peak_chart_post,main_actor.name,main_actor.birth,actors[0].name,actors[0].birth
 The White Stripes,1999,-,Jack White,1975,Jack White,1975
-De Stijl,2000,-,,,,`;
+De Stijl,2000,-,,,,
+`;
 
     const result = jsonToCsv(jsonArray);
     expect(result).toBe(expectedCsv);
@@ -108,7 +111,8 @@ De Stijl,2000,-,,,,`;
 
     const expectedCsv = `album,year,US_peak_chart_post,main_actor.name,main_actor.birth,actors[0].name,actors[0].birth
 De Stijl,2000,-,,,,
-The White Stripes,1999,-,Jack White,1975,Jack White,1975`;
+The White Stripes,1999,-,Jack White,1975,Jack White,1975
+`;
 
     const result = jsonToCsv(jsonArray);
     expect(result).toBe(expectedCsv);
@@ -124,7 +128,8 @@ The White Stripes,1999,-,Jack White,1975,Jack White,1975`;
     ];
 
     const expectedCsv = `album,year,US_peak_chart_post
-De Stijl,2000,-`;
+De Stijl,2000,-
+`;
 
     const result = jsonToCsv(jsonArray);
     expect(result).toBe(expectedCsv);
