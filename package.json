@@ -1,6 +1,6 @@
 {
   "name": "deepjsontocsv",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "",
   "main": "main.js",
   "types": "main.d.ts",
