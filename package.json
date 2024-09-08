@@ -1,6 +1,6 @@
 {
   "name": "deepjsontocsv",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "",
   "main": "main.js",
   "types": "main.d.ts",
@@ -9,7 +9,11 @@
     "test": "vitest --run",
     "typecheck": "tsc --noEmit -p ."
   },
+  "bin": {
+    "deepjsontocsv": "bin/cli.js"
+  },
   "files": [
+    "bin",
     "LICENSE",
     "main.test.ts",
     "main.ts",
@@ -28,6 +32,7 @@
   "author": "mkusaka <hinoshita1992@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "@types/node": "^20.16.5",
     "prettier": "^3.3.3",
     "typescript": "^5.5.4",
     "vite-node": "^2.0.5",
