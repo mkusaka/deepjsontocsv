@@ -20,7 +20,7 @@ importers:
         version: 20.16.6
       prettier:
         specifier: ^3.3.3
-        version: 3.3.3
+        version: 3.5.1
       typescript:
         specifier: ^5.5.4
         version: 5.6.2
@@ -373,8 +373,8 @@ packages:
     resolution: {integrity: sha512-56rxCq7G/XfB4EkXq9Egn5GCqugWvDFjafDOThIdMBsI15iqPqR5r15TfSr1YPYeEI19YeaXMCbY6u88Y76GLQ==}
     engines: {node: ^10 || ^12 || >=14}
 
-  prettier@3.3.3:
-    resolution: {integrity: sha512-i2tDNA0O5IrMO757lfrdQZCc2jPNDVntV0m/+4whiDfWaTKfMNgR7Qz0NAeGz/nRqF4m5/6CLzbP4/liHt12Ew==}
+  prettier@3.5.1:
+    resolution: {integrity: sha512-hPpFQvHwL3Qv5AdRvBFMhnKo4tYxp0ReXiPn2bxkiohEX6mBeBwEpBSQTkD458RaaDKQMYSp4hX4UtfUTA5wDw==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -740,7 +740,7 @@ snapshots:
       picocolors: 1.1.0
       source-map-js: 1.2.1
 
-  prettier@3.3.3: {}
+  prettier@3.5.1: {}
 
   rollup@4.22.4:
     dependencies:
