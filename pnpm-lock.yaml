@@ -13,7 +13,7 @@ importers:
         version: 13.0.0
       csv-stringify:
         specifier: ^6.5.1
-        version: 6.5.1
+        version: 6.5.2
     devDependencies:
       '@types/node':
         specifier: ^20.16.5
@@ -312,8 +312,8 @@ packages:
     resolution: {integrity: sha512-oPYleIY8wmTVzkvQq10AEok6YcTC4sRUBl8F9gVuwchGVUCTbl/vhLTaQqutuuySYOsu8YTgV+OxKc/8Yvx+mQ==}
     engines: {node: '>=18'}
 
-  csv-stringify@6.5.1:
-    resolution: {integrity: sha512-+9lpZfwpLntpTIEpFbwQyWuW/hmI/eHuJZD1XzeZpfZTqkf1fyvBbBLXTJJMsBuuS11uTShMqPwzx4A6ffXgRQ==}
+  csv-stringify@6.5.2:
+    resolution: {integrity: sha512-RFPahj0sXcmUyjrObAK+DOWtMvMIFV328n4qZJhgX3x2RqkQgOTU2mCUmiFR0CzM6AzChlRSUErjiJeEt8BaQA==}
 
   debug@4.4.0:
     resolution: {integrity: sha512-6WTZ/IxCY/T6BALoZHaE4ctp9xm+Z5kY/pzYaCHRFeyVhojxlrm+46y68HA6hr0TcwEssoxNiDEUJQjfPZ/RYA==}
@@ -682,7 +682,7 @@ snapshots:
 
   commander@13.0.0: {}
 
-  csv-stringify@6.5.1: {}
+  csv-stringify@6.5.2: {}
 
   debug@4.4.0:
     dependencies:
