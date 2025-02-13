@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       commander:
-        specifier: ^12.1.0
-        version: 12.1.0
+        specifier: ^13.0.0
+        version: 13.0.0
       csv-stringify:
         specifier: ^6.5.1
         version: 6.5.1
@@ -308,8 +308,8 @@ packages:
     resolution: {integrity: sha512-OAlb+T7V4Op9OwdkjmguYRqncdlx5JiofwOAUkmTF+jNdHwzTaTs4sRAGpzLF3oOz5xAyDGrPgeIDFQmDOTiJw==}
     engines: {node: '>= 16'}
 
-  commander@12.1.0:
-    resolution: {integrity: sha512-Vw8qHK3bZM9y/P10u3Vib8o/DdkvA2OtPtZvD871QKjy74Wj1WSKFILMPRPSdUSx5RFK1arlJzEtA4PkFgnbuA==}
+  commander@13.0.0:
+    resolution: {integrity: sha512-oPYleIY8wmTVzkvQq10AEok6YcTC4sRUBl8F9gVuwchGVUCTbl/vhLTaQqutuuySYOsu8YTgV+OxKc/8Yvx+mQ==}
     engines: {node: '>=18'}
 
   csv-stringify@6.5.1:
@@ -680,7 +680,7 @@ snapshots:
 
   check-error@2.1.1: {}
 
-  commander@12.1.0: {}
+  commander@13.0.0: {}
 
   csv-stringify@6.5.1: {}
 
