@@ -9,7 +9,7 @@ jobs:
     steps:
       # Checkout the code from the repository
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       # Set up Node.js using the version from the `package.json` or `.nvmrc`
       - name: Set up Node.js
