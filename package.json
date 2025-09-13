@@ -50,7 +50,7 @@
   },
   "homepage": "https://github.com/mkusaka/deepjsontocsv#readme",
   "dependencies": {
-    "commander": "^13.0.0",
+    "commander": "^14.0.0",
     "csv-stringify": "^6.5.1"
   }
 }
