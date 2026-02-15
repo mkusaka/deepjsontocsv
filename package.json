@@ -37,8 +37,8 @@
   "devDependencies": {
     "@types/node": "^24.0.0",
     "prettier": "^3.3.3",
+    "tsx": "^4.21.0",
     "typescript": "^5.5.4",
-    "vite-node": "^3.0.0",
     "vitest": "^4.0.0"
   },
   "repository": {
