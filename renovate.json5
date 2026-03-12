@@ -5,7 +5,7 @@
     {
       matchManagers: ["npm"],
       matchDepTypes: ["dependencies"],
-      matchUpdateTypes: ["minor", "patch"],
+      matchUpdateTypes: ["minor", "patch", "pin"],
       groupName: "npm non-major dependencies",
       automerge: true,
       automergeType: "pr",
@@ -14,7 +14,7 @@
     {
       matchManagers: ["npm"],
       matchDepTypes: ["devDependencies"],
-      matchUpdateTypes: ["minor", "patch"],
+      matchUpdateTypes: ["minor", "patch", "pin"],
       groupName: "npm non-major devDependencies",
       automerge: true,
       automergeType: "pr",
