@@ -52,5 +52,6 @@
   "dependencies": {
     "commander": "^14.0.0",
     "csv-stringify": "^6.5.1"
-  }
+  },
+  "packageManager": "pnpm@11.5.2"
 }
