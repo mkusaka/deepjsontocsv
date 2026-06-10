@@ -3,36 +3,37 @@ name: Run Tests and Type Check
 on:
   push:
 
+permissions: {}
+
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
     steps:
-      # Checkout the code from the repository
       - name: Checkout repository
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          persist-credentials: false
 
-      # Set up Node.js using the version from the `package.json` or `.nvmrc`
       - name: Set up Node.js
-        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
         with:
           node-version-file: .node-version
+          package-manager-cache: false
 
-      # Install pnpm
-      - name: Install pnpm
-        run: npm install -g pnpm
+      - name: Set up pnpm
+        run: corepack enable
 
-      # Install dependencies
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install --frozen-lockfile
 
-      # Run prettier format
       - name: Run prettier format
         run: pnpm run format:check
 
-      # Run TypeScript type checks
       - name: Run TypeScript type check
         run: pnpm run typecheck
 
-      # Run tests with Vitest
       - name: Run tests with Vitest
         run: pnpm run test
