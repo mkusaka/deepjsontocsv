@@ -53,5 +53,5 @@
     "commander": "^15.0.0",
     "csv-stringify": "^6.5.1"
   },
-  "packageManager": "pnpm@12.3.2"
+  "packageManager": "pnpm@12.3.4"
 }
