@@ -35,9 +35,9 @@
   "author": "mkusaka <hinoshita1992@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "@types/node": "24.13.2",
-    "prettier": "3.8.5",
-    "tsx": "4.22.4",
+    "@types/node": "24.13.3",
+    "prettier": "3.9.6",
+    "tsx": "4.23.13",
     "typescript": "7.0.2",
     "vitest": "5.0.0"
   },
