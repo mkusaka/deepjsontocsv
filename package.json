@@ -35,11 +35,11 @@
   "author": "mkusaka <hinoshita1992@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "@types/node": "24.13.2",
-    "prettier": "3.8.5",
-    "tsx": "4.22.4",
+    "@types/node": "24.13.6",
+    "prettier": "3.9.8",
+    "tsx": "4.23.13",
     "typescript": "7.0.2",
-    "vitest": "5.0.0"
+    "vitest": "5.0.1"
   },
   "repository": {
     "type": "git",
