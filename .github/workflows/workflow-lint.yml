@@ -139,7 +139,7 @@ jobs:
           advanced-security: false
           annotations: true
           # renovate: datasource=github-releases depName=zizmorcore/zizmor
-          version: v1.31.1
+          version: v1.32.0
 
   codeql-actions:
     runs-on: ubuntu-latest
